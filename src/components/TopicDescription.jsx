@@ -25,7 +25,7 @@ function TopicDescription({ values }) {
       },
       {
         scaleX: 1,
-        duration: 0.5,
+        duration: 0.8,
       }
     );
 
@@ -37,7 +37,8 @@ function TopicDescription({ values }) {
       {
         x: 0,
         duration: 0.3,
-      }
+      },
+      "-=0.8"
     );
 
     timeline.fromTo(
@@ -48,15 +49,17 @@ function TopicDescription({ values }) {
       {
         x: 0,
         duration: 0.3,
-      }
+      },
+      "-=0.8"
     );
   }, []);
 
   return (
-    <div ref={containerRef} className="text-white w-[60%]">
+    <div ref={containerRef} className="text-white w-[60%] font-neubit">
       {Object.entries(values).map(([key, value], index) => (
         <div key={key} className="relative">
           <div className="flex flex-wrap justify-start items-center">
+            
             <div className="overflow-hidden">
               <div
                 ref={(el) => (rowRefs.current[index] = el)}
