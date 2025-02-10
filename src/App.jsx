@@ -20,7 +20,9 @@ function App() {
 
   return (
     <>
-      <div className="bg-black h-screen w-screen"></div>
+      <div className="bg-black h-screen w-screen flex justify-center items-center text-white text-5xl">
+        <div>Scroll Down</div>
+      </div>
       <div className="bg-white h-[1px] w-screen"></div>
 
       <div className="bg-black min-h-screen w-screen flex flex-nowrap justify-center items-start px-10 py-2 gap-10">

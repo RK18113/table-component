@@ -14,7 +14,6 @@ function TopicDescription({ values }) {
         trigger: containerRef.current,
         start: "top center",
         toggleActions: "play reverse play reverse",
-        markers: true,
       },
     });
 
@@ -38,7 +37,7 @@ function TopicDescription({ values }) {
       {
         x: 0,
         duration: 0.3,
-      },
+      }
     );
 
     timeline.fromTo(
@@ -49,7 +48,7 @@ function TopicDescription({ values }) {
       {
         x: 0,
         duration: 0.3,
-      },
+      }
     );
   }, []);
 
@@ -58,7 +57,6 @@ function TopicDescription({ values }) {
       {Object.entries(values).map(([key, value], index) => (
         <div key={key} className="relative">
           <div className="flex flex-wrap justify-start items-center">
-            
             <div className="overflow-hidden">
               <div
                 ref={(el) => (rowRefs.current[index] = el)}
