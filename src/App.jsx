@@ -1,7 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import TopicDescription from "./components/TopicDescription";
+import Speaker from "./components/Speaker";
 import { useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -20,23 +20,16 @@ function App() {
 
   return (
     <>
-      <div className="bg-black h-screen w-screen flex justify-center items-center text-white text-5xl">
-        <div>Scroll Down</div>
-      </div>
-      <div className="bg-white h-[1px] w-screen"></div>
-
-      <div className="bg-black min-h-screen w-screen flex flex-nowrap justify-center items-start px-10 py-2 gap-10">
-        <div className="w-[40%]">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdBWB76EZKUgHdARYa-XNyIzoiJiUiyKiFrg&s"
-            alt=""
-            className="w-full h-[60vh] rounded-lg shadow-lg"
-          />
+      <div className="bg-black h-[400vh] w-screen">
+        <div className=" bg-black h-screen w-screen flex justify-center items-center text-white text-5xl">
+          <span className="overflow-hidden">Scroll Down</span>
         </div>
-        <TopicDescription values={values} />
-      </div>
+        <div className="flex flex-wrap">
+          <Speaker values={values} name="MS.CAT" subname="SPEAKER"></Speaker>
+        </div>
 
-      <div className="bg-black h-screen w-screen"></div>
+        <div className="bg-black h-screen w-screen"></div>
+      </div>
     </>
   );
 }
